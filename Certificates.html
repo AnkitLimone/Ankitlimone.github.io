@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<title>Certifications</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-cyan w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-cyan w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-black w3-hover-black">Home</a>
+    <a href="C:/Users/Ankit%20Limone/Desktop/site/Certificates.html#" class="w3-bar-item w3-button w3-text-black w3-hover-black">Certifications</a>
+    <a href="C:/Users/Ankit%20Limone/Desktop/site/cv.html" class="w3-bar-item w3-button w3-text-black w3-hover-black">About</a>
+    <a href="C:/Users/Ankit%20Limone/Desktop/site/Contact.html" class="w3-bar-item w3-button w3-text-black w3-hover-black">Contact</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-cyan w3-right" onclick="w3_open()"><i class="fa fa-bars "></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>CERTIFICATES</b></h1>
+  <p><b>Some Certificates achieved by Me.</b></p>
+  <p class="w3-padding-16 "><button class="w3-button w3-cyan" onclick="myFunction()">Change View</button></p>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="C:\Users\Ankit Limone\Desktop\site\Statistical Methods for Decision Making.jpg" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\HTML Fundamentals course.jpg" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\Career prep Bootcamp.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="C:\Users\Ankit Limone\Desktop\site\SQL Fundamentals course.jpg" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\google digital marketing.jpg" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\jQuery Tutorial course.jpg" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\Machine Learning course.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="C:\Users\Ankit Limone\Desktop\site\Game Development using Pygame.png" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\React + Redux course.jpg" style="width:100%">
+    <img src="C:\Users\Ankit Limone\Desktop\site\Step into Robotic Process Automation.png" style="width:100%">
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-cyan w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <a href="https://www.google.com/search?q=ankit+limone&oq=a&aqs=chrome.0.69i59l3j46i67i275j69i60l3j69i65.1041j0j7&sourceid=chrome&ie=UTF-8" target="_blank" class="fa fa-google w3-hover-opacity"></a>
+  <a href="https://www.facebook.com/ankit.limone.5" target="_blank" class="fa fa-facebook-official w3-hover-opacity"></a>
+  <a href="https://www.instagram.com/ak_demonimmortal/" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
+  <a href="https://twitter.com/ankitlimone2" target="_blank" class="fa fa-twitter w3-hover-opacity"></a>
+  <a href="https://in.linkedin.com/in/ankit-limone-381206180" target="_blank" class="fa fa-linkedin w3-hover-opacity"></a>
+  <p>Copyright © Developed by <a href="https://www.google.com/search?q=ankit+limone&oq=a&aqs=chrome.0.69i59l3j46i67i275j69i60l3j69i65.1041j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Ankit Limone</a></p>
+</footer>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
