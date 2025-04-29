@@ -1,988 +1,900 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>AnkitLimone</title>
-    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/A.png">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/blocks.css">
-    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css">
-    <link rel="stylesheet" href="assets/css/intro.css">
-    <link rel="stylesheet" href="assets/css/Loading-Div.css">
-    <link rel="stylesheet" href="assets/css/Modern-Contact-Form.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Limone | Data Scientist | GenAI & NLP Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #00f0ff;
+            --secondary: #7928ca;
+            --dark: #0a0a14;
+            --darker: #050510;
+            --light: #f0f0f0;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary);
+        }
+        
+        .neon-border {
+            box-shadow: 0 0 10px var(--primary), 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+        
+        .neon-hover:hover {
+            text-shadow: 0 0 8px var(--primary), 0 0 15px var(--primary);
+            transition: text-shadow 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, #1a1a2e 100%);
+        }
+        
+        .skill-bar {
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 3px;
+            transition: width 1.5s ease;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+        }
+        
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px var(--primary);
+            }
+            to {
+                box-shadow: 0 0 20px var(--primary);
+            }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid var(--primary);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary) }
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
 </head>
-
-<body><style>
-     .navbar{
-     background: #000000;
-     padding-top: 0;
-     padding-bottom: 0;
-     box-shadow: 1px 3px 4px 0 cyan;
-}
- .navbar-light .navbar-brand {
-     color: #fff;
-	   font-size: 40px;
-}
-
-.navbar-light .navbar-brand span {
-     color: cyan;
-}
-
- .navbar-light .navbar-nav .nav-link {
-     color: #fff;
-}
- .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-     color: cyan;
-}
-
- .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand span:hover {
-     color: #fff;
-}
-
- .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-     color: cyan;
-}
- .navbar-light .navbar-nav .nav-link{
-     padding-top: 22px;
-     padding-bottom: 22px;
-     transition: 0.3s;
-     padding-left: 24px;
-     padding-right: 24px;
-         font-size: 20px;
-}
- .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-     background: #000000;
-     transition: 0.3s;
-}
-.dropdown-item:focus, .dropdown-item:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #e4002b !important;
-}
-.sm-menu{
-    border-radius: 0px;
-    border: 0px;
-    top: 97%;
-    box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
-}
-.dropdown-item {
-    color: #3c3c3c;
-        font-size: 14px;
-}
-.dropdown-item.active, .dropdown-item:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: #2196F3;
-}
-.navbar-toggler{
-    outline: none !important;
-}
-.navbar-tog{
-    color: #1ebdc2;
-}
-.megamenu-li {
-	position: static;
-}
-
-.megamenu {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	right: 0;
-	padding: 15px;
-}
-.megamenu h6{
-    margin-left: 21px;
-}
-.megamenu i{
-    width: 20px;
-}
-
-</style>
-
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-        
-			<a class="navbar-brand" href="#home"><b><span> < Ankit</span> Limone /> </b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_nav" aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span> 
-        </button>
-        <div class="collapse navbar-collapse" id="mobile_nav">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right">
-        </ul>
-        <ul class="navbar-nav navbar-light">
-					<li class="nav-item"><a class="nav-link" href="#home"><b>Home</b></a></li>
-					
-            
-            <!--========-->
-           <li class="nav-item"><a class="nav-link" href="#aboutme"><b>About Me</b></a></li>
-            <!--=========-->
-					<li class="nav-item"><a class="nav-link" href="#contact"><b>Contact Me</b></a></li>
-           
-        </ul>
+<body class="gradient-bg">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-black/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold neon-text flex items-center">
+                        <span class="text-2xl mr-1">AL</span>
+                        <span class="hidden md:inline">Ankit Limone</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white neon-hover">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white neon-hover">Experience</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white neon-hover">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white neon-hover">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white neon-hover">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-</nav>
-<script>
-    
-    $(document).ready(function () {
-$('.navbar-light .dmenu').hover(function () {
-        $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
-    }, function () {
-        $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
-    });
-}); 
- 
-    $(document).ready(function() {
-	$(".megamenu").on("click", function(e) {
-		e.stopPropagation();
-	});
-});
-</script>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-lg pb-4">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium neon-hover">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium neon-hover">Experience</a>
+                <a href="#skills" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium neon-hover">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium neon-hover">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium neon-hover">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <div></div>
-    <div id="home"><div id="large-header" class="large-header">
-  <canvas id="demo-canvas"></canvas>
-    
-    <h1 class="main-title"><div style="font-size:25px; font-family: 'Source Code Pro', monospace;">< ErrorTB /> I am </div><div style="font-size: 50px; font-family: 'Source Code Pro', monospace;">Ankit Limone</div>
-        <div id="parent">A FullStack Developer.</div><br>
-        <p style="font-size: 20px; font-family: 'Ubuntu', sans-serif;">I am a student of International Institute of Professional Studies<br> Indore persuing master of technology. Currently working on<br>Machine Learning.
-        </p>
-        
-        <a class="btn btn-primary submit-now" role="button" style="background: rgb(0,0,0);font-family: Poppins, sans-serif;border-color: cyan;font-size:20px;" href="resume.pdf">Resume</a>
-    </h1>
-</div>
-</div>
-    <section id="aboutme" style="background: #000000;"><section class="about-section">
-    	<div class="container">
-        	<div class="row clearfix">
-            	
-                <!--Content Column-->
-                <div class="content-column col-md-6 col-sm-12 col-xs-12">
-                	<div class="inner-column">
-                    	<div class="sec-title">
-                    		<div class="title">About Me</div>
-                        	<h2>Hello! I am Ankit Limone.</h2>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 neon-text">
+                <span class="typewriter">Ankit Limone</span>
+            </h1>
+            <h2 class="text-xl md:text-3xl font-medium mb-8 text-cyan-300">Data Scientist | GenAI & NLP Expert | Machine Learning Engineer</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-12">
+                Transforming data into intelligent solutions through cutting-edge AI, machine learning, and natural language processing.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com" target="_blank" class="text-gray-300 hover:text-white text-2xl neon-hover" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-white text-2xl neon-hover" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://leetcode.com" target="_blank" class="text-gray-300 hover:text-white text-2xl neon-hover" title="LeetCode">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="https://kaggle.com" target="_blank" class="text-gray-300 hover:text-white text-2xl neon-hover" title="Kaggle">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+                <a href="https://researchgate.net" target="_blank" class="text-gray-300 hover:text-white text-2xl neon-hover" title="ResearchGate">
+                    <i class="fab fa-researchgate"></i>
+                </a>
+            </div>
+            <div class="mt-12">
+                <a href="#about" class="inline-flex items-center px-6 py-3 border border-cyan-400 text-base font-medium rounded-md text-white bg-black/20 hover:bg-cyan-400/10 neon-border glow">
+                    Explore My Work
+                    <svg class="ml-3 -mr-1 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black/30 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-text">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-400/30 glow">
+                        <img src="https://via.placeholder.com/400x400" alt="Ankit Limone" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-cyan-400/10 backdrop-blur-sm"></div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-16">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-300">Jr. Data Scientist at Mirafra Technologies</h3>
+                    <p class="text-gray-300 mb-6">
+                        Passionate AI professional with expertise in Generative AI, Natural Language Processing, and Machine Learning. 
+                        Currently working as a Jr. Data Scientist at Mirafra Technologies, Bengaluru, focusing on AI-based solutions, 
+                        predictive modeling, and LLM fine-tuning.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-black/30 p-4 rounded-lg border border-gray-800">
+                            <h4 class="font-bold text-cyan-300 mb-2">Education</h4>
+                            <p class="text-gray-300">Integrated M.Tech. in IT (CGPA: 8.90)</p>
+                            <p class="text-gray-400 text-sm">Devi Ahilya Vishwavidyalaya</p>
                         </div>
-                        <div class="text" style="color:white; font-size:20px; text-align:left;">I’m a student pursuing a Master of Technology Degree in Information Technology in Engineering at International Institute Of Professional Studies, Devi Ahilya Vishwa Vidyalaya, Indore. I Have a passion for Web Designing, Software Development and Machine Learning with a keen interest in new Technologies. I Always want to learn something new. Currently I am working on Artificial Intelligence and Machine learning.<br><br><i>Addicted to new tech.</i></div>
-                        
+                        <div class="bg-black/30 p-4 rounded-lg border border-gray-800">
+                            <h4 class="font-bold text-cyan-300 mb-2">Achievements</h4>
+                            <p class="text-gray-300">500+ DSA problems solved</p>
+                            <p class="text-gray-400 text-sm">LeetCode & HackerRank</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-cyan-400/10 text-cyan-300 border border-cyan-400/30">GenAI</span>
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-purple-400/10 text-purple-300 border border-purple-400/30">NLP</span>
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-blue-400/10 text-blue-300 border border-blue-400/30">LLM Fine-tuning</span>
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-400/10 text-green-300 border border-green-400/30">Predictive Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gradient-to-b from-black/30 to-black/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-text">Professional Journey</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            </div>
+            <div class="relative">
+                <div class="border-l-2 border-cyan-400/30 absolute h-full left-1/2 transform -translate-x-1/2 hidden md:block"></div>
+                
+                <!-- Timeline Item 1 -->
+                <div class="md:flex mb-12 relative timeline-item">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                            <h3 class="text-xl font-bold text-cyan-300 mb-2">Jr. Data Scientist</h3>
+                            <p class="text-gray-300 mb-2">Mirafra Technologies</p>
+                            <p class="text-gray-400 text-sm">July 2024 - Present</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="md:hidden w-4 h-4 bg-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-4"></div>
+                    <div class="md:w-1/2 md:pl-12 md:pt-12">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800">
+                            <p class="text-gray-300">
+                                Working on AI-based solutions, predictive modeling, and LLM fine-tuning. 
+                                Developing innovative approaches to leverage generative AI for business applications.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
-                <!--Image Column-->
-                <div class="image-column col-md-6 col-sm-12 col-xs-12">
-                	<div class="inner-column " data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="image">
-                        	<img src="assets/img/about.png" alt="">
-                            
-                            </div>
+                <!-- Timeline Item 2 -->
+                <div class="md:flex mb-12 relative timeline-item">
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                            <h3 class="text-xl font-bold text-purple-300 mb-2">Machine Learning Intern</h3>
+                            <p class="text-gray-300 mb-2">Bosch Global Software Technologies</p>
+                            <p class="text-gray-400 text-sm">Jan 2024 - June 2024</p>
                         </div>
                     </div>
-            </div>
-        </div>
-    </section>
-
-<style>
-    
-
-.about-section{
-	position:relative;
-	padding:120px 0px;
-  background-color:black;
-  
-}
-
-.about-section .content-column{
-	position:relative;
-	margin-bottom:40px;
-}
-
-.about-section .content-column .inner-column{
-	position:relative;
-	padding-top:50px;
-	padding-right:100px;
-}
-
-.about-section .content-column .text{
-	position:relative;
-	
-	font-size:15px;
-	line-height:2em;
-	margin-bottom:40px;
-}
-
-
-
-.about-section .image-column{
-	position:relative;
-	margin-bottom:50px;
-}
-
-.about-section .image-column .inner-column{
-	position:relative;
-	padding:40px 40px 0px 0px;
-	margin-left:50px;
-}
-
-.about-section .image-column .inner-column:after{
-	position:absolute;
-	content:'';
-	right:0px;
-	top:0px;
-	left:40px;
-	bottom:100px;
-	z-index:-1;
-	border:3.5px solid cyan;
-}
-
-.about-section .image-column .inner-column .image{
-	position:relative;
-}
-
-.about-section .image-column .inner-column .image:before{
-	position:absolute;
-	content:'';
-	left:-50px;
-	bottom:-50px;
-	width:299px;
-	height:299px;
-	background:url(img/pattern-2.png) no-repeat;
-}
-
-.about-section .image-column .inner-column .image img{
-	position:relative;
-	width:100%;
-	display:block;
-}
-
-.about-section .image-column .inner-column .image .overlay-box{
-	position:absolute;
-	left:40px;
-	bottom:48px;
-}
-
-.about-section .image-column .inner-column .image .overlay-box .year-box{
-	position:relative;
-	
-	font-size:24px;
-	font-weight:700;
-	line-height:1.4em;
-	padding-left:125px;
-}
-
-.about-section .image-column .inner-column .image .overlay-box .year-box .number{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:110px;
-	height:110px;
-	color:cyan;
-	font-size:68px;
-	font-weight:700;
-	line-height:105px;
-	text-align:left;
-	
-	border:1px solid cyan;
-}
-.about-section .btn-style-three:before {
-    position: absolute;
-    content: '';
-    left: 10px;
-    top: 10px;
-    z-index: -1;
-    right: -10px;
-    bottom: -10px;
-    background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat;
-}
-
-
-.sec-title{
-	color:#fff;
-}
-.sec-title {
-    position: relative;
-    padding-bottom: 40px;
-}
-.sec-title .title {
-    position: relative;
-    color: cyan;
-    font-size: 18px;
-    font-weight: 600;
-    padding-right: 50px;
-    margin-bottom: 15px;
-    display: inline-block;
-    text-transform: capitalize;
-}
-.sec-title .title:before {
-    position: absolute;
-    content: '';
-    right: 0px;
-    bottom: 7px;
-    width: 40px;
-    height: 1px;
-    
-}
-</style></section>
-    <section style="background: #000000;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-     viewBox="-50 0 500 458.4" width="500" height="500">
-
-    <defs>
-        <filter id="f1" x="0" y="0" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="7" />
-        </filter>
-    </defs>
-
-    <g id="shadow" filter="url(#f1)">
-        <path fill="#151618" d="m14,318l149,86l235,-136l-150,-87l-234,137z" />
-    </g>
-    <g id="computer">
-        <g id="screen">
-            <g id="corner-top-right">
-                <defs>
-                    <path id="SVGID_1_" d="M240.8,9.2l4.5,2.6c-1-0.6-2.4-0.5-3.9,0.4l-4.5-2.6 C238.4,8.7,239.8,8.6,240.8,9.2z"/>
-                </defs>
-                <clipPath id="SVGID_2_">
-                    <use xlink:href="#SVGID_1_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_2_)">
-                    <path fill="#C7C8CA" d="M241.4,12.2l-4.5-2.6c0.3-0.1,0.5-0.3,0.8-0.4l4.5,2.6C241.9,11.9,241.7,12,241.4,12.2"/>
-                    <path fill="#C3C4C6" d="M242.2,11.8l-4.5-2.6c0.2-0.1,0.4-0.2,0.6-0.2l4.5,2.6C242.6,11.6,242.4,11.7,242.2,11.8"/>
-                    <path fill="#BFC0C2" d="M242.8,11.6l-4.5-2.6c0.2,0,0.3-0.1,0.5-0.1l4.5,2.6C243.1,11.5,243,11.5,242.8,11.6"/>
-                    <path fill="#BBBCBE" d="M243.3,11.5l-4.5-2.6c0.1,0,0.3,0,0.4,0l4.5,2.6C243.6,11.4,243.4,11.4,243.3,11.5"/>
-                    <path fill="#B7B9BA" d="M243.7,11.4l-4.5-2.6c0.1,0,0.2,0,0.4,0l4.5,2.6C243.9,11.4,243.8,11.4,243.7,11.4"/>
-                    <path fill="#B3B5B6" d="M244.1,11.4l-4.5-2.6c0.1,0,0.2,0,0.3,0l4.5,2.6C244.3,11.4,244.2,11.4,244.1,11.4"/>
-                    <path fill="#AFB1B3" d="M244.4,11.5l-4.5-2.6c0.1,0,0.2,0,0.3,0.1l4.5,2.6C244.6,11.5,244.5,11.5,244.4,11.5"/>
-                    <path fill="#ABADAF" d="M244.7,11.5l-4.5-2.6c0.1,0,0.2,0.1,0.3,0.1l4.5,2.6C244.9,11.6,244.8,11.6,244.7,11.5"/>
-                    <path fill="#A7A9AB" d="M245,11.6L240.5,9c0.1,0,0.2,0.1,0.3,0.1l4.5,2.6C245.2,11.7,245.1,11.7,245,11.6"/>
-                    <path fill="#A3A5A7" d="M245.3,11.8l-4.5-2.6c0,0,0,0,0,0L245.3,11.8C245.3,11.8,245.3,11.8,245.3,11.8"/>
-                </g>
-            </g>
-            <g id="corner-bottom-left">
-                <defs>
-                    <path id="SVGID_3_" d="M16.3,315.7l-4.5-2.6c-1-0.6-1.6-1.8-1.6-3.5l4.5,2.6
-                    C14.7,313.9,15.4,315.1,16.3,315.7z"/>
-                </defs>
-                <clipPath id="SVGID_4_">
-                    <use xlink:href="#SVGID_3_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_4_)">
-                    <path fill="#909294" d="M16.3,315.7l-4.5-2.6c-1-0.6-1.6-1.8-1.6-3.5l4.5,2.6C14.7,313.9,15.4,315.1,16.3,315.7"/>
-                </g>
-            </g>
-            <polygon id="border-left" fill="#939497" points="14.7,312.2 10.2,309.5 9.8,147 14.3,149.6"/>
-            <polygon id="border-top" fill="#D3D4D5" points="19.8,140.1 15.2,137.5 236.9,9.5 241.4,12.2"/>
-            <path id="frame" fill="#606161" d="M241.4,12.2c3-1.7,5.5-0.3,5.5,3.1l0.5,162.5c0,3.5-2.5,7.7-5.5,9.5l-221.6,128c-3,1.7-5.5,0.3-5.5-3.1
-                l-0.5-162.5c0-3.5,2.5-7.7,5.5-9.5L241.4,12.2z"/>
-            <g id="corner-top-left">
-                <defs>
-                    <path id="SVGID_5_" d="M14.3,149.6L9.8,147c0-3.5,2.5-7.7,5.5-9.5l4.5,2.6
-                    C16.7,141.9,14.3,146.2,14.3,149.6z"/>
-                </defs>
-                <clipPath id="SVGID_6_">
-                    <use xlink:href="#SVGID_5_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_6_)">
-                    <path fill="#909294" d="M14.3,149.6L9.8,147c0-0.3,0-0.7,0.1-1.1l4.5,2.6C14.3,148.9,14.3,149.3,14.3,149.6"/>
-                    <path fill="#949598" d="M14.3,148.6l-4.5-2.6c0-0.3,0.1-0.5,0.1-0.8l4.5,2.6C14.4,148.1,14.4,148.3,14.3,148.6"/>
-                    <path fill="#98999C" d="M14.5,147.8l-4.5-2.6c0-0.2,0.1-0.4,0.2-0.6l4.5,2.6C14.6,147.4,14.5,147.6,14.5,147.8"/>
-                    <path fill="#9B9D9F" d="M14.6,147.2l-4.5-2.6c0.1-0.2,0.1-0.4,0.2-0.6l4.5,2.6C14.7,146.8,14.7,147,14.6,147.2"/>
-                    <path fill="#9FA1A3" d="M14.8,146.6l-4.5-2.6c0.1-0.2,0.1-0.3,0.2-0.5l4.5,2.6C14.9,146.3,14.9,146.4,14.8,146.6"/>
-                    <path fill="#A3A5A7" d="M15,146.1l-4.5-2.6c0.1-0.2,0.1-0.3,0.2-0.5l4.5,2.6C15.1,145.8,15.1,145.9,15,146.1"/>
-                    <path fill="#A7A9AB" d="M15.2,145.6l-4.5-2.6c0.1-0.2,0.1-0.3,0.2-0.5l4.5,2.6C15.3,145.3,15.3,145.4,15.2,145.6"/>
-                    <path fill="#ABADAF" d="M15.4,145.1l-4.5-2.6c0.1-0.2,0.2-0.3,0.2-0.5l4.5,2.6C15.6,144.8,15.5,145,15.4,145.1"/>
-                    <path fill="#AFB1B3" d="M15.7,144.6l-4.5-2.6c0.1-0.2,0.2-0.3,0.3-0.5l4.5,2.6C15.8,144.3,15.7,144.5,15.7,144.6"/>
-                    <path fill="#B3B5B6" d="M15.9,144.2l-4.5-2.6c0.1-0.2,0.2-0.3,0.3-0.5l4.5,2.6C16.1,143.9,16,144,15.9,144.2"/>
-                    <path fill="#B7B9BA" d="M16.2,143.7l-4.5-2.6c0.1-0.2,0.2-0.3,0.3-0.5l4.5,2.6C16.4,143.4,16.3,143.6,16.2,143.7"/>
-                    <path fill="#BBBCBE" d="M16.5,143.2l-4.5-2.6c0.1-0.2,0.2-0.3,0.4-0.5l4.5,2.6C16.8,142.9,16.6,143.1,16.5,143.2"/>
-                    <path fill="#BFC0C2" d="M16.9,142.7l-4.5-2.6c0.1-0.2,0.3-0.4,0.4-0.5l4.5,2.6C17.2,142.4,17,142.5,16.9,142.7"/>
-                    <path fill="#C3C4C6" d="M17.3,142.2l-4.5-2.6c0.2-0.2,0.4-0.4,0.6-0.6l4.5,2.6C17.7,141.8,17.5,142,17.3,142.2"/>
-                    <path fill="#C7C8CA" d="M17.9,141.6l-4.5-2.6c0.6-0.6,1.2-1,1.8-1.4l4.5,2.6C19.1,140.5,18.5,141,17.9,141.6"/>
-                </g>
-            </g>
-
-            <polygon id="code-blue-bg" fill="#8ED4DC" points="238.5,22.8 239,174 23.3,298.5 22.9,147.3"/>
-            <path class="screen" fill="#11191A" d="M239.6,23.2c0-2.3-0.4-2.3-1.7-1.6c-0.5,0.3-1.2,0.7-2,1.2l-211.3,122c-0.8,0.5-1.3,0.7-1.7,0.9 c-0.8,0.5-0.5,0.6-0.5,2.9L22.9,302c0,2.2-0.3,2.7,0.5,2.3c0.3-0.2,0.9-0.6,1.7-1l212-122.4c0.8-0.5,1.4-0.8,1.8-1 c1-0.6,1.1-1,1.1-3.2L239.6,23.2z"/>
-
-            <g>
-                <defs>
-                    <path id="code-cover-screen-1" d="m26.5,210l209.5,-118.5l2,89l-213,123l1.5,-93.5z" />
-                </defs>
-                <clipPath id="clip-path-screen-2">
-                    <use xlink:href="#code-cover-screen-1" overflow="hidden"/>
-                </clipPath>
-                <g clip-path="url(#clip-path-screen-2">
-                    <g id="scrolling-code">
-                        <polygon class="code line-1" fill="#7D7E7E" points="93.9,176.3 93.9,182.2 56.6,203.8 56.5,197.9"/>
-                        <polygon class="code line-1" fill="#3B963D" points="47.6,203 47.7,208.9 34.6,216.4 34.6,210.5"/>
-                        <polygon class="code line-1" fill="#7D7E7E" points="144.7,147 144.7,152.9 98.2,179.7 98.2,173.8"/>
-                        <polygon class="code line-1" fill="#7D7E7E" points="187.7,122.1 187.7,128 149,150.4 149,144.5"/>
-                        
-                        <polygon class="code line-2" fill="#3A4488" points="51.9,211.8 51.9,217.7 29.2,230.8 29.2,224.9"/>
-                        <polygon class="code line-2" fill="#7D7E7E" points="179.5,138.1 179.5,144 140.8,166.3 140.8,160.4"/>
-                        <polygon class="code line-2" fill="#7D7E7E" points="136.2,163.1 136.2,169 98.2,191 98.2,185.1"/>
-                        <polygon class="code line-2" fill="#7D7E7E" points="88.5,190.6 88.5,196.5 56.6,215 56.6,209.1"/>
-
-                        <polygon class="code line-3" fill="#CA9733" points="47.7,224.8 47.7,230.7 34.7,238.3 34.7,232.4"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="151.4,165 151.4,170.9 126,185.6 126,179.7"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="121.2,182.4 121.2,188.3 98.2,201.6 98.2,195.7"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="183.9,146.2 183.9,152.1 158.5,166.8 158.5,160.9"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="93.9,198.2 93.9,204.1 56.6,225.6 56.6,219.7"/>
-
-                        <polygon class="code line-4" fill="#3A4488" points="52,231.8 52,237.7 29.3,250.8 29.3,244.9"/>
-                        <polygon class="code line-4" fill="#7D7E7E" points="169.8,163.8 169.8,169.7 131.1,192 131.1,186.1"/>
-                        <polygon class="code line-4" fill="#7D7E7E" points="126.9,188.6 126.9,194.5 98.3,211 98.2,205.1"/>
-                        <polygon class="code line-4" fill="#7D7E7E" points="89.3,210.3 89.3,216.2 56.7,235.1 56.6,229.1"/>
-
-                        <polygon class="code line-5" fill="#3B963D" points="47.8,246.1 47.8,252 34.7,259.5 34.7,253.6"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="186.3,166.1 186.4,172 167.8,182.7 167.8,176.8"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="163.1,179.5 163.1,185.4 135.4,201.4 135.4,195.5"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="93.3,219.8 93.3,225.7 56.7,246.9 56.7,241"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="130.7,198.2 130.7,204.1 98.3,222.8 98.3,216.9"/>
-                        
-                        <polygon class="code line-6" fill="#3B963D" points="47.8,256.7 47.8,262.6 34.8,270.2 34.8,264.2"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="182.1,178.6 182.1,184.5 158.6,198.1 158.6,192.2"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="131.2,208.6 131.2,214.5 98.3,233.5 98.3,227.6"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="154.1,195.3 154.2,201.2 135.4,212.1 135.4,206.1"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="94,230 94,235.9 56.7,257.5 56.7,251.6"/>
-
-                        <polygon class="code line-7" fill="#7D7E7E" points="163.1,200.2 163.1,206.1 131.2,224.5 131.2,218.6"/>
-                        <polygon class="code line-7" fill="#7D7E7E" points="186.4,186.8 186.4,192.7 167.9,203.4 167.9,197.5"/>
-                        <polygon class="code line-7" fill="#7D7E7E" points="127,221.1 127,227 98.4,243.5 98.3,237.6"/>
-                        
-                        <polygon class="code line-8" fill="#7D7E7E" points="121.3,235.6 121.4,241.5 98.4,254.7 98.4,248.8"/>
-                        <polygon class="code line-8" fill="#7D7E7E" points="184.1,199.3 184.1,205.2 158.7,219.9 158.6,214"/>
-                        <polygon class="code line-8" fill="#7D7E7E" points="151.5,218.1 126.1,232.8 126.1,238.7 151.6,224"/>
-                    </g>
-                </g>
-
-                <g clip-path="url(#clip-path-screen-2">
-                    <g id="scrolling-code-2">
-                        <polygon class="code line-1" fill="#7D7E7E" points="93.9,176.3 93.9,182.2 56.6,203.8 56.5,197.9"/>
-                        <polygon class="code line-1" fill="#3B963D" points="47.6,203 47.7,208.9 34.6,216.4 34.6,210.5"/>
-                        <polygon class="code line-1" fill="#7D7E7E" points="144.7,147 144.7,152.9 98.2,179.7 98.2,173.8"/>
-                        <polygon class="code line-1" fill="#7D7E7E" points="187.7,122.1 187.7,128 149,150.4 149,144.5"/>
-                        
-                        <polygon class="code line-2" fill="#3A4488" points="51.9,211.8 51.9,217.7 29.2,230.8 29.2,224.9"/>
-                        <polygon class="code line-2" fill="#7D7E7E" points="179.5,138.1 179.5,144 140.8,166.3 140.8,160.4"/>
-                        <polygon class="code line-2" fill="#7D7E7E" points="136.2,163.1 136.2,169 98.2,191 98.2,185.1"/>
-                        <polygon class="code line-2" fill="#7D7E7E" points="88.5,190.6 88.5,196.5 56.6,215 56.6,209.1"/>
-
-                        <polygon class="code line-3" fill="#CA9733" points="47.7,224.8 47.7,230.7 34.7,238.3 34.7,232.4"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="151.4,165 151.4,170.9 126,185.6 126,179.7"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="121.2,182.4 121.2,188.3 98.2,201.6 98.2,195.7"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="183.9,146.2 183.9,152.1 158.5,166.8 158.5,160.9"/>
-                        <polygon class="code line-3" fill="#7D7E7E" points="93.9,198.2 93.9,204.1 56.6,225.6 56.6,219.7"/>
-
-                        <polygon class="code line-4" fill="#3A4488" points="52,231.8 52,237.7 29.3,250.8 29.3,244.9"/>
-                        <polygon class="code line-4" fill="#7D7E7E" points="169.8,163.8 169.8,169.7 131.1,192 131.1,186.1"/>
-                        <polygon class="code line-4" fill="#7D7E7E" points="126.9,188.6 126.9,194.5 98.3,211 98.2,205.1"/>
-                        <polygon class="code line-4" fill="#7D7E7E" points="89.3,210.3 89.3,216.2 56.7,235.1 56.6,229.1"/>
-
-                        <polygon class="code line-5" fill="#3B963D" points="47.8,246.1 47.8,252 34.7,259.5 34.7,253.6"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="186.3,166.1 186.4,172 167.8,182.7 167.8,176.8"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="163.1,179.5 163.1,185.4 135.4,201.4 135.4,195.5"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="93.3,219.8 93.3,225.7 56.7,246.9 56.7,241"/>
-                        <polygon class="code line-5" fill="#7D7E7E" points="130.7,198.2 130.7,204.1 98.3,222.8 98.3,216.9"/>
-                        
-                        <polygon class="code line-6" fill="#3B963D" points="47.8,256.7 47.8,262.6 34.8,270.2 34.8,264.2"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="182.1,178.6 182.1,184.5 158.6,198.1 158.6,192.2"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="131.2,208.6 131.2,214.5 98.3,233.5 98.3,227.6"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="154.1,195.3 154.2,201.2 135.4,212.1 135.4,206.1"/>
-                        <polygon class="code line-6" fill="#7D7E7E" points="94,230 94,235.9 56.7,257.5 56.7,251.6"/>
-
-                        <polygon class="code line-7" fill="#7D7E7E" points="163.1,200.2 163.1,206.1 131.2,224.5 131.2,218.6"/>
-                        <polygon class="code line-7" fill="#7D7E7E" points="186.4,186.8 186.4,192.7 167.9,203.4 167.9,197.5"/>
-                        <polygon class="code line-7" fill="#7D7E7E" points="127,221.1 127,227 98.4,243.5 98.3,237.6"/>
-                        
-                        <polygon class="code line-8" fill="#7D7E7E" points="121.3,235.6 121.4,241.5 98.4,254.7 98.4,248.8"/>
-                        <polygon class="code line-8" fill="#7D7E7E" points="184.1,199.3 184.1,205.2 158.7,219.9 158.6,214"/>
-                        <polygon class="code line-8" fill="#7D7E7E" points="151.5,218.1 126.1,232.8 126.1,238.7 151.6,224"/>
-                    </g>
-                </g>
-            </g>
-
-            <polygon class="code line-0" fill="#A2A75C" points="33.7,158.5 33.7,164.4 29.1,167.1 29,161.2"/>
-            <polygon class="code line-0" fill="#7D7E7E" points="114.3,111.9 114.3,117.9 101.3,125.4 101.3,119.5"/>
-            <polygon class="code line-0" fill="#7D7E7E" points="156.9,87.3 156.9,93.2 119.6,114.8 119.6,108.9"/>
-            <polygon class="code line-0" fill="#7D7E7E" points="97.1,121.9 97.1,127.8 73.8,141.3 73.7,135.4"/>
-            <polygon class="code line-0" fill="#C1426F" points="69,138.1 69,144 37,162.5 36.9,156.6"/>
-            
-            <polygon class="code core" fill="#5CA6AB" points="54.5,177.5 54.5,180.5 51.6,182.3 51.6,179.3"/>
-            <polygon class="code core" fill="#5CA6AB" points="62.4,177.2 62.4,180.2 52.9,185.6 52.9,182.6"/>
-            <polygon class="code core" fill="#5CA6AB" points="110.9,140.9 110.9,143.9 107.9,145.7 107.9,142.7"/>
-            <polygon class="code core" fill="#5CA6AB" points="109.6,133.6 109.6,136.6 100.2,142 100.1,139"/>
-            <polygon class="code core" fill="#5CA6AB" points="63.7,164.1 63.7,167.1 60.7,168.8 60.7,165.8"/>
-            <polygon class="code core" fill="#5CA6AB" points="75.8,157.1 75.8,160.1 72.8,161.8 72.8,158.8"/>
-            <polygon class="code core" fill="#5CA6AB" points="75.8,165.3 75.8,168.3 72.8,170 72.8,167"/>
-            <polygon class="code core" fill="#5CA6AB" points="110.9,136.9 110.9,139.9 107.9,141.6 107.9,138.6"/>
-            <polygon class="code core" fill="#5CA6AB" points="97.2,140.6 97.2,143.6 94.3,145.4 94.2,142.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="97.2,148.8 97.3,151.8 94.3,153.5 94.3,150.5"/>
-            <polygon class="code core" fill="#5CA6AB" points="97.2,144.7 97.2,147.7 94.3,149.4 94.3,146.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="110.9,145 110.9,148 107.9,149.7 107.9,146.7"/>
-            <polygon class="code core" fill="#5CA6AB" points="101.7,150.3 101.7,153.3 98.8,155 98.8,152"/>
-            <polygon class="code core" fill="#5CA6AB" points="97.3,156.9 97.3,159.9 94.3,161.7 94.3,158.7"/>
-            <polygon class="code core" fill="#5CA6AB" points="109.6,149.9 109.6,152.9 100.2,158.3 100.2,155.3"/>
-            <polygon class="code core" fill="#5CA6AB" points="101.7,146.2 101.7,149.2 98.8,150.9 98.7,147.9"/>
-            <polygon class="code core" fill="#5CA6AB" points="97.3,152.9 97.3,155.9 94.3,157.6 94.3,154.6"/>
-            <polygon class="code core" fill="#5CA6AB" points="92.6,159.6 92.6,162.6 89.6,164.4 89.6,161.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="101.7,142.1 101.7,145.1 98.7,146.9 98.7,143.9"/>
-            <polygon class="code core" fill="#5CA6AB" points="88.1,162.3 88.1,165.3 77.3,171.5 77.3,168.5"/>
-            <polygon class="code core" fill="#5CA6AB" points="80.5,162.6 80.5,165.6 77.5,167.3 77.5,164.3"/>
-            <polygon class="code core" fill="#5CA6AB" points="75.8,169.3 75.8,172.3 72.8,174.1 72.8,171"/>
-            <polygon class="code core" fill="#5CA6AB" points="80.4,154.4 80.5,157.4 77.5,159.1 77.5,156.1"/>
-            <polygon class="code core" fill="#5CA6AB" points="68.2,173.7 68.2,176.7 65.2,178.5 65.2,175.5"/>
-            <polygon class="code core" fill="#5CA6AB" points="68.2,169.7 68.2,172.7 65.2,174.4 65.2,171.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="74.3,162.1 74.3,165.1 64.9,170.6 64.8,167.6"/>
-            <polygon class="code core" fill="#5CA6AB" points="63.7,172.3 63.7,175.3 60.7,177 60.7,174"/>
-            <polygon class="code core" fill="#5CA6AB" points="68.1,161.5 68.1,164.5 65.2,166.2 65.2,163.3"/>
-            <polygon class="code core" fill="#5CA6AB" points="63.7,168.2 63.7,171.2 60.7,172.9 60.7,169.9"/>
-            <polygon class="code core" fill="#5CA6AB" points="74.3,154 74.3,157 64.8,162.4 64.8,159.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="54.5,173.5 54.5,176.5 51.6,178.2 51.5,175.2"/>
-            <polygon class="code core" fill="#5CA6AB" points="115.1,155.1 115.2,156.5 35,202.7 35,201.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="54.5,169.4 54.5,172.4 51.5,174.1 51.5,171.1"/>
-            <polygon class="code core" fill="#5CA6AB" points="50.1,184.3 50.1,187.3 40.6,192.7 40.6,189.7"/>
-            <polygon class="code core" fill="#5CA6AB" points="62.3,160.9 62.3,163.9 52.9,169.3 52.9,166.3"/>
-            <polygon class="code core" fill="#5CA6AB" points="42.2,184.6 42.2,187.6 39.3,189.4 39.2,186.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="42.2,176.5 42.2,179.5 39.2,181.2 39.2,178.2"/>
-            <polygon class="code core" fill="#5CA6AB" points="50,168 50,171 40.6,176.4 40.6,173.4"/>
-            <polygon class="code core" fill="#5CA6AB" points="115.1,125.6 115.1,127 35,173.2 35,171.8"/>
-            <polygon class="code core" fill="#5CA6AB" points="85,155.9 85,158.9 77.5,163.3 77.5,160.3"/>
-            <polygon class="code core" fill="#5CA6AB" points="88.1,146 88.1,149 77.3,155.2 77.3,152.2"/>
-            <polygon class="code core" fill="#5CA6AB" points="42.2,180.6 42.2,183.6 39.2,185.3 39.2,182.3"/>            
-
-            <g>
-                <defs>
-                    <path id="code-cover-screen-0" d="M239.6,23.2c0-2.3-0.4-2.3-1.7-1.6c-0.5,0.3-1.2,0.7-2,1.2l-211.3,122c-0.8,0.5-1.3,0.7-1.7,0.9 c-0.8,0.5-0.5,0.6-0.5,2.9L22.9,302c0,2.2-0.3,2.7,0.5,2.3c0.3-0.2,0.9-0.6,1.7-1l212-122.4c0.8-0.5,1.4-0.8,1.8-1 c1-0.6,1.1-1,1.1-3.2L239.6,23.2z"/>
-                </defs>
-                <clipPath id="clip-path-screen">
-                    <use xlink:href="#code-cover-screen-0" overflow="hidden"/>
-                </clipPath>
-                <g clip-path="url(#clip-path-screen)">
-                    <path id="code-cover-screen" fill="#11191A" d="M239.6,23.2c0-2.3-0.4-2.3-1.7-1.6c-0.5,0.3-1.2,0.7-2,1.2l-211.3,122c-0.8,0.5-1.3,0.7-1.7,0.9 c-0.8,0.5-0.5,0.6-0.5,2.9L22.9,302c0,2.2-0.3,2.7,0.5,2.3c0.3-0.2,0.9-0.6,1.7-1l212-122.4c0.8-0.5,1.4-0.8,1.8-1 c1-0.6,1.1-1,1.1-3.2L239.6,23.2z"/>
-                </g>
-            </g>
-
-            <path class="control red" fill="#C24C4B" d="M31.8,145.3c1.4-0.8,2.6-0.2,2.6,1.5c0,1.6-1.1,3.6-2.6,4.5c-1.4,0.8-2.6,0.2-2.6-1.5
-          C29.3,148.2,30.4,146.2,31.8,145.3z"/>
-            <path class="control yellow" fill="#CA9733" d="M40.5,140.4c1.4-0.8,2.6-0.2,2.6,1.5c0,1.6-1.1,3.6-2.6,4.5c-1.4,0.8-2.6,0.2-2.6-1.5 C37.9,143.2,39,141.2,40.5,140.4z"/>
-            <path class="control green" fill="#3B963D" d="M49.1,135.4c1.4-0.8,2.6-0.2,2.6,1.5s-1.1,3.6-2.6,4.5c-1.4,0.8-2.6,0.2-2.6-1.5S47.7,136.2,49.1,135.4z"/>
-            <polygon class="control title" fill="#646565" points="142,81.7 142.1,87.6 118.7,101.1 118.7,95.2"/>
-            
-            <path id="reflex" opacity="0.27" fill="#A9A8A8" d="M237,14.7l-85.7,49.5L147,74.8l-22.7,152.2l31.7-25.3l-13.4,27.8l96.7-55.4l-0.8-151.2 C238.5,22.9,247,7.6,237,14.7z"/>
-        </g>
-
-        <g id="bottom">
-            <g>
-                <defs>
-                    <path id="SVGID_7_" d="M397.2,268.3l0,7.3c0,1.2-0.8,2.3-2.3,3.2l0-7.3 C396.4,270.6,397.2,269.4,397.2,268.3z"/>
-                </defs>
-                <clipPath id="SVGID_8_">
-                    <use xlink:href="#SVGID_7_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_8_)">
-                    <path fill="#9B9D9F" d="M397.2,268.3l0,7.3c0,0,0,0,0,0.1L397.2,268.3C397.2,268.3,397.2,268.3,397.2,268.3"/>
-                    <path fill="#9FA1A3" d="M397.2,268.3l0,7.3c0,0.2,0,0.3-0.1,0.5l0-7.3C397.2,268.6,397.2,268.5,397.2,268.3"/>
-                    <path fill="#A3A5A7" d="M397.1,268.8l0,7.3c0,0.1-0.1,0.3-0.1,0.4l0-7.3C397.1,269.1,397.1,268.9,397.1,268.8"/>
-                    <path fill="#A7A9AB" d="M397,269.2l0,7.3c-0.1,0.2-0.1,0.3-0.2,0.4l0-7.3C396.9,269.5,396.9,269.4,397,269.2"/>
-                    <path fill="#ABADAF" d="M396.8,269.7l0,7.3c-0.1,0.2-0.2,0.3-0.3,0.5l0-7.3C396.6,270,396.7,269.8,396.8,269.7"/>
-                    <path fill="#AFB1B3" d="M396.5,270.1l0,7.3c-0.1,0.2-0.3,0.4-0.5,0.5l0-7.3C396.2,270.5,396.3,270.3,396.5,270.1"/>
-                    <path fill="#B3B5B6" d="M396,270.7l0,7.3c-0.3,0.3-0.6,0.5-1,0.7l0-7.3C395.4,271.2,395.7,270.9,396,270.7"/>
-                    <path fill="#B7B9BA" d="M395,271.4l0,7.3c0,0-0.1,0-0.1,0.1L395,271.4C394.9,271.4,395,271.4,395,271.4"/>
-                </g>
-            </g>
-            <g>
-                <defs>
-                    <path id="SVGID_9_" d="M14.4,325.2l0-7.3c0,1.2,0.8,2.3,2.3,3.2l0,7.3 C15.2,327.5,14.4,326.3,14.4,325.2z"/>
-                </defs>
-                <clipPath id="SVGID_10_">
-                    <use xlink:href="#SVGID_9_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_10_)">
-                    <path fill="#909294" d="M16.8,321.1l0,7.3c-1.5-0.9-2.3-2.1-2.3-3.2l0-7.3C14.5,319,15.2,320.2,16.8,321.1"/>
-                </g>
-            </g>
-            <polygon fill="#C1C3C4" points="394.9,271.4 394.9,278.8 169.1,410 169.2,402.6"/>
-            <polygon fill="#939597" points="158.1,402.6 158.1,410 16.7,328.4 16.8,321.1                 "/>
-            <path fill="#D3D4D5" d="M394.9,265c3.1,1.8,3.1,4.7,0,6.4L169.2,402.6c-3,1.8-8,1.8-11.1,0L16.8,321.1c-3.1-1.8-3.1-4.7,0-6.4 l225.8-131.2c3-1.8,8-1.8,11.1,0L394.9,265z"/>
-            <g>
-                <defs>
-                    <path id="SVGID_11_" d="M169.2,402.6l0,7.3c-3,1.8-8,1.8-11.1,0l0-7.3 C161.1,404.4,166.1,404.4,169.2,402.6z"/>
-                </defs>
-                <clipPath id="SVGID_12_">
-                    <use xlink:href="#SVGID_11_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_12_)">
-                    <path fill="#B7B9BA" d="M169.2,402.6l0,7.3c-0.5,0.3-1.1,0.6-1.7,0.7l0-7.3C168.1,403.2,168.6,402.9,169.2,402.6"/>
-                    <path fill="#B3B5B6" d="M167.5,403.4l0,7.3c-0.5,0.2-1,0.3-1.5,0.4l0-7.3C166.5,403.7,167,403.5,167.5,403.4"/>
-                    <path fill="#AFB1B3" d="M166,403.8l0,7.3c-0.3,0.1-0.7,0.1-1,0.1l0-7.3C165.3,403.9,165.6,403.8,166,403.8"/>
-                    <path fill="#ABADAF" d="M165,403.9l0,7.3c-0.3,0-0.6,0-0.9,0.1l0-7.3C164.4,403.9,164.7,403.9,165,403.9"/>
-                    <path fill="#A7A9AB" d="M164.1,404l0,7.3c-0.3,0-0.5,0-0.8,0l0-7.3C163.5,404,163.8,404,164.1,404"/>
-                    <path fill="#A3A5A7" d="M163.3,404l0,7.3c-0.3,0-0.5,0-0.8,0l0-7.3C162.8,403.9,163,404,163.3,404"/>
-                    <path fill="#9FA1A3" d="M162.5,403.9l0,7.3c-0.3,0-0.5,0-0.8-0.1l0-7.3C162,403.9,162.2,403.9,162.5,403.9"/>
-                    <path fill="#9B9D9F" d="M161.7,403.8l0,7.3c-0.3,0-0.5-0.1-0.8-0.1l0-7.3C161.2,403.8,161.5,403.8,161.7,403.8"/>
-                    <path fill="#98999C" d="M161,403.7l0,7.3c-0.3-0.1-0.6-0.1-0.8-0.2l0-7.3C160.4,403.6,160.7,403.6,161,403.7"/>
-                    <path fill="#949598" d="M160.1,403.5l0,7.3c-0.3-0.1-0.6-0.2-0.9-0.3l0-7.3C159.5,403.3,159.8,403.4,160.1,403.5"/>
-                    <path fill="#909294" d="M159.2,403.2l0,7.3c-0.4-0.2-0.8-0.3-1.1-0.5l0-7.3C158.4,402.8,158.8,403,159.2,403.2"/>
-                </g>
-            </g>
-            <polygon fill="#595959" points="223.2,205.3 71.8,293.3 60.3,286.7 211.8,198.7"/>
-            <polygon fill="#545454" points="223.2,205.3 223.2,206.1 71.8,294.1 71.8,293.3"/>
-            <polygon fill="#464848" points="71.8,293.3 71.8,294.1 60.3,287.5 60.3,286.7"/>
-            <g>
-                <defs>
-                    <path id="SVGID_13_" d="M306.5,310.4l0,0.8c0,0.2-0.2,0.5-0.5,0.6l0-0.8 C306.3,310.9,306.5,310.7,306.5,310.4z"/>
-                </defs>
-                <clipPath id="SVGID_14_">
-                    <use xlink:href="#SVGID_13_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_14_)">
-                    <polyline fill="#6E6F6F" points="306.5,310.4 306.5,311.3 306.5,311.3 306.5,310.4 306.5,310.4"/>
-                    <path fill="#707172" d="M306.5,310.4l0,0.8c0,0,0,0.1,0,0.1L306.5,310.4C306.5,310.5,306.5,310.5,306.5,310.4"/>
-                    <path fill="#737475" d="M306.5,310.5l0,0.8c0,0,0,0.1,0,0.1L306.5,310.5C306.5,310.6,306.5,310.6,306.5,310.5"/>
-                    <path fill="#767777" d="M306.5,310.6l0,0.8c0,0,0,0.1,0,0.1L306.5,310.6C306.4,310.7,306.4,310.7,306.5,310.6"/>
-                    <path fill="#797A7A" d="M306.4,310.7l0,0.8c0,0,0,0.1-0.1,0.1L306.4,310.7C306.4,310.8,306.4,310.8,306.4,310.7"/>
-                    <path fill="#7C7D7D" d="M306.3,310.8l0,0.8c0,0-0.1,0.1-0.1,0.1l0-0.8C306.3,310.9,306.3,310.9,306.3,310.8"/>
-                    <path fill="#7F7F80" d="M306.3,310.9l0,0.8c-0.1,0.1-0.1,0.1-0.2,0.1l0-0.8C306.1,311,306.2,311,306.3,310.9"/>
-                    <path fill="#828283" d="M306,311.1l0,0.8c0,0,0,0,0,0L306,311.1C306,311.1,306,311.1,306,311.1"/>
-                </g>
-            </g>
-            <g>
-                <defs>
-                    <path id="SVGID_15_" d="M193.3,323.5l0-0.8c0,0.2,0.2,0.5,0.5,0.7l0,0.8 C193.4,324,193.3,323.7,193.3,323.5z"/>
-                </defs>
-                <clipPath id="SVGID_16_">
-                    <use xlink:href="#SVGID_15_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_16_)">
-                    <path fill="#656667" d="M193.8,323.3l0,0.8c-0.3-0.2-0.5-0.4-0.5-0.7l0-0.8C193.3,322.9,193.4,323.2,193.8,323.3"/>
-                </g>
-            </g>
-            <polygon fill="#898989" points="306,311.1 306,311.9 240.6,349.9 240.6,349.1"/>
-            <polygon fill="#686969" points="238.4,349.1 238.4,349.9 193.7,324.2 193.8,323.3"/>
-            <path fill="#959595" d="M306,309.8c0.6,0.4,0.6,0.9,0,1.3l-65.4,38c-0.6,0.4-1.6,0.4-2.3,0l-44.6-25.8c-0.6-0.4-0.6-0.9,0-1.3 l65.4-38c0.6-0.4,1.6-0.4,2.3,0L306,309.8z"/>
-            <g>
-                <defs>
-                    <path id="SVGID_17_" d="M240.6,349.1l0,0.8c-0.6,0.4-1.6,0.4-2.3,0l0-0.8 C239,349.5,240,349.5,240.6,349.1z"/>
-                </defs>
-                <clipPath id="SVGID_18_">
-                    <use xlink:href="#SVGID_17_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_18_)">
-                    <path fill="#828283" d="M240.6,349.1l0,0.8c-0.1,0.1-0.2,0.1-0.4,0.2l0-0.8C240.4,349.2,240.5,349.2,240.6,349.1"/>
-                    <path fill="#7F7F80" d="M240.3,349.2l0,0.8c-0.1,0-0.2,0.1-0.3,0.1l0-0.8C240.1,349.3,240.2,349.3,240.3,349.2"/>
-                    <path fill="#7C7D7D" d="M240,349.3l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239.8,349.3,239.9,349.3,240,349.3"/>
-                    <path fill="#797A7A" d="M239.8,349.3l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239.6,349.4,239.7,349.4,239.8,349.3"/>
-                    <path fill="#767777" d="M239.6,349.4l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239.5,349.4,239.5,349.4,239.6,349.4"/>
-                    <path fill="#737475" d="M239.4,349.4l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239.3,349.4,239.4,349.4,239.4,349.4"/>
-                    <path fill="#707172" d="M239.3,349.4l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239.2,349.3,239.2,349.3,239.3,349.4"/>
-                    <path fill="#6E6F6F" d="M239.1,349.3l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239,349.3,239.1,349.3,239.1,349.3"/>
-                    <path fill="#6B6C6C" d="M239,349.3l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C238.8,349.3,238.9,349.3,239,349.3"/>
-                    <path fill="#68696A" d="M238.8,349.3l0,0.8c-0.1,0-0.1,0-0.2-0.1l0-0.8C238.7,349.2,238.7,349.2,238.8,349.3"/>
-                    <path fill="#656667" d="M238.6,349.2l0,0.8c-0.1,0-0.2-0.1-0.2-0.1l0-0.8C238.4,349.1,238.5,349.2,238.6,349.2"/>
-                </g>
-            </g>
-            <g>
-                <defs>
-                    <path id="SVGID_19_" d="M261.1,344.6l0-1.6c0-0.4,0.3-0.8,0.8-1.1l0,1.6 C261.4,343.8,261.1,344.2,261.1,344.6z"/>
-                </defs>
-                <clipPath id="SVGID_20_">
-                    <use xlink:href="#SVGID_19_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_20_)">
-                    <path fill="#909294" d="M261.1,344.6l0-1.6c0-0.3,0.2-0.6,0.5-0.9l0,1.6C261.3,344,261.1,344.3,261.1,344.6"/>
-                    <path fill="#949598" d="M261.6,343.7l0-1.6c0,0,0.1-0.1,0.1-0.1l0,1.6C261.7,343.6,261.6,343.7,261.6,343.7"/>
-                    <path fill="#98999C" d="M261.7,343.6l0-1.6c0,0,0.1-0.1,0.1-0.1l0,1.6C261.8,343.5,261.8,343.6,261.7,343.6"/>
-                    <polyline fill="#9B9D9F" points="261.9,343.5 261.9,341.9 261.9,341.9 261.9,343.5 261.9,343.5"/>
-                </g>
-            </g>
-            <polygon fill="#A4A5A7" points="261.9,343.5 261.9,341.9 293.7,323.4 293.7,325"/>
-            <g>
-                <defs>
-                    <path id="SVGID_21_" d="M298.3,324.5l0,1.6c0-0.4-0.3-0.8-0.8-1.1l0-1.6 C298,323.7,298.3,324.1,298.3,324.5z"/>
-                </defs>
-                <clipPath id="SVGID_22_">
-                    <use xlink:href="#SVGID_21_"  overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_22_)">
-                    <path fill="#DFDFE0" d="M297.5,325l0-1.6c0,0,0.1,0,0.1,0L297.5,325C297.5,325,297.5,325,297.5,325"/>
-                    <path fill="#DBDBDC" d="M297.5,325.1l0-1.6c0,0,0.1,0,0.1,0.1L297.5,325.1C297.6,325.1,297.6,325.1,297.5,325.1"/>
-                    <path fill="#D7D8D9" d="M297.6,325.1l0-1.6c0,0,0.1,0,0.1,0.1L297.6,325.1C297.7,325.2,297.7,325.1,297.6,325.1"/>
-                    <path fill="#D3D4D5" d="M297.7,325.2l0-1.6c0,0,0,0,0.1,0.1L297.7,325.2C297.8,325.2,297.7,325.2,297.7,325.2"/>
-                    <path fill="#CFD0D1" d="M297.8,325.2l0-1.6c0,0,0,0,0.1,0.1L297.8,325.2C297.8,325.3,297.8,325.3,297.8,325.2"/>
-                    <path fill="#CBCCCD" d="M297.9,325.3l0-1.6c0,0,0,0,0.1,0.1L297.9,325.3C297.9,325.3,297.9,325.3,297.9,325.3"/>
-                    <path fill="#C7C8CA" d="M297.9,325.4l0-1.6c0,0,0,0,0.1,0.1L297.9,325.4C298,325.4,297.9,325.4,297.9,325.4"/>
-                    <path fill="#C3C4C6" d="M298,325.4l0-1.6c0,0,0,0,0,0.1L298,325.4C298,325.5,298,325.4,298,325.4"/>
-                    <path fill="#BFC0C2" d="M298,325.5l0-1.6c0,0,0,0,0,0.1L298,325.5C298,325.5,298,325.5,298,325.5"/>
-                    <path fill="#BBBCBE" d="M298.1,325.5l0-1.6c0,0,0,0,0,0.1L298.1,325.5C298.1,325.6,298.1,325.6,298.1,325.5"/>
-                    <path fill="#B7B9BA" d="M298.1,325.6l0-1.6c0,0,0,0,0,0.1L298.1,325.6C298.1,325.6,298.1,325.6,298.1,325.6"/>
-                    <path fill="#B3B5B6" d="M298.1,325.7l0-1.6c0,0,0,0,0,0.1L298.1,325.7C298.2,325.7,298.1,325.7,298.1,325.7"/>
-                    <path fill="#AFB1B3" d="M298.2,325.7l0-1.6c0,0,0,0,0,0.1L298.2,325.7C298.2,325.8,298.2,325.7,298.2,325.7"/>
-                    <path fill="#ABADAF" d="M298.2,325.8l0-1.6c0,0,0,0,0,0.1L298.2,325.8C298.2,325.8,298.2,325.8,298.2,325.8"/>
-                    <path fill="#A7A9AB" d="M298.2,325.9l0-1.6c0,0,0,0,0,0.1L298.2,325.9C298.2,325.9,298.2,325.9,298.2,325.9"/>
-                    <path fill="#A3A5A7" d="M298.2,325.9l0-1.6c0,0,0,0.1,0,0.1L298.2,325.9C298.2,326,298.2,326,298.2,325.9"/>
-                    <path fill="#9FA1A3" d="M298.2,326l0-1.6c0,0,0,0.1,0,0.1L298.2,326C298.2,326.1,298.2,326,298.2,326"/>
-                    <polyline fill="#9B9D9F" points="298.2,326.1 298.3,324.5 298.3,324.5 298.2,326.1 298.2,326.1"/>
-                </g>
-            </g>
-            <path fill="#9B9C9F" d="M297.5,325c1,0.6,1,1.6,0,2.2l-31.8,18.5c-1,0.6-2.7,0.6-3.8,0c-1-0.6-1-1.6,0-2.2l31.8-18.5 C294.7,324.4,296.4,324.4,297.5,325z"/>
-            <g>
-                <defs>
-                    <path id="SVGID_23_" d="M293.7,325l0-1.6c1-0.6,2.7-0.6,3.8,0l0,1.6 C296.4,324.4,294.7,324.4,293.7,325z"/>
-                </defs>
-                <clipPath id="SVGID_24_">
-                    <use xlink:href="#SVGID_23_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_24_)">
-                    <path fill="#9B9D9F" d="M293.7,325l0-1.6c0,0,0.1,0,0.1-0.1l0,1.6C293.8,325,293.7,325,293.7,325"/>
-                    <path fill="#9FA1A3" d="M293.8,325l0-1.6c0,0,0.1,0,0.1-0.1l0,1.6C293.9,324.9,293.8,324.9,293.8,325"/>
-                    <path fill="#A3A5A7" d="M293.9,324.9l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294,324.9,293.9,324.9,293.9,324.9"/>
-                    <path fill="#A7A9AB" d="M294,324.9l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.1,324.8,294,324.8,294,324.9"/>
-                    <path fill="#ABADAF" d="M294.1,324.8l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.2,324.8,294.2,324.8,294.1,324.8"/>
-                    <path fill="#AFB1B3" d="M294.2,324.8l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.3,324.8,294.3,324.8,294.2,324.8"/>
-                    <path fill="#B3B5B6" d="M294.3,324.7l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.4,324.7,294.4,324.7,294.3,324.7"/>
-                    <path fill="#B7B9BA" d="M294.4,324.7l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.5,324.7,294.5,324.7,294.4,324.7"/>
-                    <path fill="#BBBCBE" d="M294.5,324.7l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.6,324.7,294.6,324.7,294.5,324.7"/>
-                    <path fill="#BFC0C2" d="M294.6,324.7l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.7,324.6,294.7,324.7,294.6,324.7"/>
-                    <path fill="#C3C4C6" d="M294.7,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.8,324.6,294.8,324.6,294.7,324.6"/>
-                    <path fill="#C7C8CA" d="M294.8,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294.9,324.6,294.9,324.6,294.8,324.6"/>
-                    <path fill="#CBCCCD" d="M295,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295,324.6,295,324.6,295,324.6"/>
-                    <path fill="#CFD0D1" d="M295.1,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.1,324.6,295.1,324.6,295.1,324.6"/>
-                    <path fill="#D3D4D5" d="M295.2,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.2,324.6,295.2,324.6,295.2,324.6"/>
-                    <path fill="#D7D8D9" d="M295.3,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.4,324.6,295.3,324.6,295.3,324.6"/>
-                    <path fill="#DBDBDC" d="M295.4,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.5,324.6,295.4,324.6,295.4,324.6"/>
-                    <path fill="#DFDFE0" d="M295.5,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.6,324.6,295.5,324.6,295.5,324.6"/>
-                    <path fill="#E3E3E4" d="M295.6,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.7,324.6,295.7,324.6,295.6,324.6"/>
-                    <path fill="#E7E7E7" d="M295.7,324.6l0-1.6c0,0,0.1,0,0.1,0l0,1.6C295.8,324.6,295.8,324.6,295.7,324.6"/>
-                    <path fill="#EBEBEB" d="M295.9,324.6l0-1.6c0.1,0,0.1,0,0.2,0l0,1.6C296,324.6,295.9,324.6,295.9,324.6"/>
-                    <path fill="#F2F2F2" d="M296,324.6l0-1.6c0.1,0,0.2,0,0.3,0l0,1.6C296.2,324.6,296.1,324.6,296,324.6"/>
-                    <path fill="#F3F3F3" d="M296.3,324.6l0-1.6c0.1,0,0.2,0,0.3,0.1l0,1.6C296.5,324.7,296.4,324.6,296.3,324.6"/>
-                    <path fill="#F2F2F2" d="M296.6,324.7l0-1.6c0.1,0,0.2,0.1,0.3,0.1l0,1.6C296.8,324.7,296.7,324.7,296.6,324.7"/>
-                    <path fill="#EBEBEB" d="M296.9,324.8l0-1.6c0.1,0,0.1,0.1,0.2,0.1l0,1.6C297.1,324.8,297,324.8,296.9,324.8"/>
-                    <path fill="#E7E7E7" d="M297.1,324.8l0-1.6c0.1,0,0.1,0,0.2,0.1l0,1.6C297.2,324.9,297.2,324.9,297.1,324.8"/>
-                    <path fill="#E3E3E4" d="M297.3,324.9l0-1.6c0,0,0.1,0,0.1,0.1l0,1.6C297.4,325,297.3,324.9,297.3,324.9"/>
-                    <path fill="#DFDFE0" d="M297.4,325l0-1.6c0,0,0,0,0,0L297.4,325C297.5,325,297.4,325,297.4,325"/>
-                </g>
-            </g>
-            <g>
-                <defs>
-                    <path id="SVGID_25_" d="M315.3,243.2l0,0.8c0,0.5-0.3,1-0.9,1.3l0-0.8 C315,244.2,315.3,243.7,315.3,243.2z"/>
-                </defs>
-                <clipPath id="SVGID_26_">
-                    <use xlink:href="#SVGID_25_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_26_)">
-                    <path fill="#494A4A" d="M315.3,243.2l0,0.8c0,0,0,0,0,0L315.3,243.2C315.3,243.2,315.3,243.2,315.3,243.2"/>
-                    <path fill="#4A4B4B" d="M315.3,243.3l0,0.8c0,0.1,0,0.1,0,0.2l0-0.8C315.3,243.4,315.3,243.3,315.3,243.3"/>
-                    <path fill="#4B4C4C" d="M315.3,243.4l0,0.8c0,0.1,0,0.1-0.1,0.2l0-0.8C315.2,243.6,315.2,243.5,315.3,243.4"/>
-                    <path fill="#4C4D4D" d="M315.2,243.6l0,0.8c0,0.1-0.1,0.1-0.1,0.2l0-0.8C315.2,243.8,315.2,243.7,315.2,243.6"/>
-                    <path fill="#4D4E4E" d="M315.1,243.8l0,0.8c0,0.1-0.1,0.1-0.1,0.2l0-0.8C315,243.9,315.1,243.9,315.1,243.8"/>
-                    <path fill="#4E4F4F" d="M315,244l0,0.8c-0.1,0.1-0.1,0.1-0.2,0.2l0-0.8C314.9,244.2,314.9,244.1,315,244"/>
-                    <path fill="#505050" d="M314.8,244.2l0,0.8c-0.1,0.1-0.3,0.2-0.4,0.3l0-0.8C314.5,244.4,314.7,244.3,314.8,244.2"/>
-                    <path fill="#515152" d="M314.4,244.5l0,0.8c0,0,0,0,0,0L314.4,244.5C314.3,244.5,314.4,244.5,314.4,244.5"/>
-                </g>
-            </g>
-            <g>
-                <defs>
-                    <path id="SVGID_27_" d="M61.7,310.8l0-0.8c0,0.5,0.3,1,1,1.3l0,0.8 C62,311.8,61.7,311.3,61.7,310.8z"/>
-                </defs>
-                <clipPath id="SVGID_28_">
-                    <use xlink:href="#SVGID_27_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_28_)">
-                    <path fill="#464747" d="M62.7,311.3l0,0.8c-0.6-0.4-1-0.9-1-1.3l0-0.8C61.7,310.5,62,311,62.7,311.3"/>
-                </g>
-            </g>
-            <polygon fill="#545454" points="314.3,244.6 314.3,245.4 133.6,350.4 133.6,349.6"/>
-            <polygon fill="#464848" points="129,349.6 129,350.4 62.6,312.1 62.7,311.3"/>
-            <path fill="#595959" d="M314.3,241.9c1.3,0.7,1.3,1.9,0,2.7L133.6,349.6c-1.3,0.7-3.3,0.7-4.6,0l-66.3-38.3 c-1.3-0.7-1.3-1.9,0-2.7l180.8-105.1c1.3-0.7,3.3-0.7,4.6,0L314.3,241.9z"/>
-            <g>
-                <defs>
-                    <path id="SVGID_29_" d="M133.6,349.6l0,0.8c-1.3,0.7-3.3,0.7-4.6,0l0-0.8 C130.2,350.3,132.3,350.3,133.6,349.6z"/>
-                </defs>
-                <clipPath id="SVGID_30_">
-                    <use xlink:href="#SVGID_29_" overflow="visible"/>
-                </clipPath>
-                <g clip-path="url(#SVGID_30_)">
-                    <path fill="#515152" d="M133.6,349.6l0,0.8c-0.2,0.1-0.5,0.2-0.7,0.3l0-0.8C133.1,349.8,133.3,349.7,133.6,349.6"/>
-                    <path fill="#505050" d="M132.8,349.9l0,0.8c-0.2,0.1-0.4,0.1-0.6,0.2l0-0.8C132.4,350,132.7,350,132.8,349.9"/>
-                    <path fill="#4E4F4F" d="M132.2,350.1l0,0.8c-0.1,0-0.3,0-0.4,0.1l0-0.8C132,350.1,132.1,350.1,132.2,350.1"/>
-                    <path fill="#4D4E4E" d="M131.8,350.1l0,0.8c-0.1,0-0.2,0-0.4,0l0-0.8C131.6,350.2,131.7,350.1,131.8,350.1"/>
-                    <path fill="#4C4D4D" d="M131.5,350.2l0,0.8c-0.1,0-0.2,0-0.3,0l0-0.8C131.2,350.2,131.3,350.2,131.5,350.2"/>
-                    <path fill="#4B4C4C" d="M131.1,350.2l0,0.8c-0.1,0-0.2,0-0.3,0l0-0.8C130.9,350.2,131,350.2,131.1,350.2"/>
-                    <path fill="#4A4B4B" d="M130.8,350.1l0,0.8c-0.1,0-0.2,0-0.3,0l0-0.8C130.6,350.1,130.7,350.1,130.8,350.1"/>
-                    <path fill="#494A4A" d="M130.5,350.1l0,0.8c-0.1,0-0.2,0-0.3-0.1l0-0.8C130.3,350.1,130.4,350.1,130.5,350.1"/>
-                    <path fill="#484949" d="M130.2,350.1l0,0.8c-0.1,0-0.2-0.1-0.3-0.1l0-0.8C129.9,350,130,350,130.2,350.1"/>
-                    <path fill="#474848" d="M129.8,350l0,0.8c-0.1,0-0.3-0.1-0.4-0.1l0-0.8C129.6,349.9,129.7,349.9,129.8,350"/>
-                    <path fill="#464747" d="M129.4,349.8l0,0.8c-0.2-0.1-0.3-0.1-0.5-0.2l0-0.8C129.1,349.7,129.3,349.8,129.4,349.8"/>
-                </g>
-            </g>
-        </g>
-    </g> 
-</svg>
-
-
-<style>
-    
-
-svg {
-  margin-top: -30px;
-}
-
-#code-cover-screen {
-  animation: scrollCodeIn 4s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes scrollCodeIn {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(180px);
-    opacity: 1;
-  }
-}
-
-#scrolling-code {
-  animation: scrollCode 3s 1.65s linear infinite;
-}
-
-#scrolling-code-2 {
-  animation: scrollCode2 3s 1.65s linear infinite;
-  transform: translateY(87px);
-}
-
-@keyframes scrollCode {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  49.99% {
-    transform: translateY(-80px);
-    opacity: 1;
-  }
-  50% {
-    transform: translatey(87px);
-    opacity: 0;
-  }
-  50.01% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes scrollCode2 {
-  0% {
-    transform: translateY(87);
-    opacity: 1;
-  }
-  49.99% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  99.98% {
-    transform: translatey(-80px);
-    opacity: 1;
-  }
-  99.99% {
-    transform: translateY(87);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-</style></div>
-                <div class="col-md-6">
-                    <h1 style="color: cyan;font-family: Poppins, sans-serif;">Some technologies I have worked on.</h1><br>
-                    <div class="row">
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; HTML 5</h4>
+                    <div class="md:hidden w-4 h-4 bg-purple-400 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-4"></div>
+                    <div class="md:w-1/2 md:pr-12 md:text-right md:pt-12">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800">
+                            <p class="text-gray-300">
+                                Developed predictive analytics models for industrial applications. 
+                                Implemented machine learning algorithms to optimize manufacturing processes.
+                            </p>
                         </div>
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; CSS 3</h4>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="md:flex mb-12 relative timeline-item">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                            <h3 class="text-xl font-bold text-blue-300 mb-2">Database Developer</h3>
+                            <p class="text-gray-300 mb-2">Hon'ble High Court Project</p>
+                            <p class="text-gray-400 text-sm">April 2022 - Aug 2022</p>
                         </div>
-                    </div><br>
-                    <div class="row">
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Java</h4>
+                    </div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="md:hidden w-4 h-4 bg-blue-400 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-4"></div>
+                    <div class="md:w-1/2 md:pl-12 md:pt-12">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800">
+                            <p class="text-gray-300">
+                                Built a comprehensive database management system for legal data handling. 
+                                Designed efficient data structures to manage and retrieve court case information.
+                            </p>
                         </div>
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Bootstrap</h4>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="md:flex relative timeline-item">
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                            <h3 class="text-xl font-bold text-green-300 mb-2">Software Development Intern</h3>
+                            <p class="text-gray-300 mb-2">Devi Ahilya Vishwavidyalaya</p>
+                            <p class="text-gray-400 text-sm">Dec 2022 - March 2023</p>
                         </div>
-                    </div><br>
-                    <div class="row">
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Flutter</h4>
-                        </div>
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Python</h4>
-                        </div>
-                    </div><br>
-                    <div class="row">
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; GCP</h4>
-                        </div>
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Git/Github</h4>
-                        </div>
-                    </div><br>
-                    <div class="row">
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Illustrator</h4>
-                        </div>
-                        <div class="col">
-                            <h4 style="color: rgb(255,255,255);text-align: center;font-family: Poppins, sans-serif;">&gt; Wordpress</h4>
+                    </div>
+                    <div class="md:hidden w-4 h-4 bg-green-400 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-4"></div>
+                    <div class="md:w-1/2 md:pr-12 md:text-right md:pt-12">
+                        <div class="bg-black/30 p-6 rounded-lg border border-gray-800">
+                            <p class="text-gray-300">
+                                Created data-driven web applications for university projects. 
+                                Implemented front-end interfaces and back-end APIs for academic management systems.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact" class="getintouch" style="background: #000000;">
-        <div class="container modern-form">
-            <div class="text-center">
-                <h4 style="color: #00ffff;font-size: 45px;font-family: Poppins, sans-serif;">Get in touch</h4>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-black/30 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-text">Technical Expertise</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
             </div>
-            <hr class="modern-form__hr">
-            <div class="row">
-                <div class="col text-center"><a class="btn btn-primary submit-now" role="button" style="background: rgb(0,0,0);font-family: Poppins, sans-serif;border-color: cyan;" href="https://wa.me/+917354193408">Let's have a talk :)</a></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Programming Languages -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                    <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center">
+                        <i class="fas fa-code mr-2"></i> Programming Languages
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Python</span>
+                                <span class="text-gray-400">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">SQL</span>
+                                <span class="text-gray-400">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI/ML Frameworks -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                    <h3 class="text-xl font-bold text-purple-300 mb-4 flex items-center">
+                        <i class="fas fa-brain mr-2"></i> AI/ML Frameworks
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">TensorFlow/PyTorch</span>
+                                <span class="text-gray-400">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Scikit-learn</span>
+                                <span class="text-gray-400">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GenAI & LLMs -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                    <h3 class="text-xl font-bold text-blue-300 mb-4 flex items-center">
+                        <i class="fas fa-robot mr-2"></i> GenAI & LLMs
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">OpenAI/DeepSeek</span>
+                                <span class="text-gray-400">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">RAG Systems</span>
+                                <span class="text-gray-400">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Engineering -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border">
+                    <h3 class="text-xl font-bold text-green-300 mb-4 flex items-center">
+                        <i class="fas fa-database mr-2"></i> Data Engineering
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Cloud Computing</span>
+                                <span class="text-gray-400">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Streamlit</span>
+                                <span class="text-gray-400">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://drive.google.com/file/d/1h6tegbm3wEDGMw_5xEflIgUKPl1iyYbA/view?usp=sharing" class="inline-flex items-center px-6 py-3 border border-cyan-400 text-base font-medium rounded-md text-white bg-black/20 hover:bg-cyan-400/10 neon-border glow">
+                    Download Full Resume
+                    <i class="fas fa-download ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
-    <footer class="footer-dark" style="height: 109px;padding: 20px 0px;background: rgb(0,0,0);">
-        <div class="container">
-            <div class="row">
-                <div class="col item social" style="height: 23px;"><a data-bss-hover-animate="rubberBand" href="https://wa.me/+917354193408"><i class="icon ion-social-whatsapp-outline" style="color: cyan;"></i></a><a data-bss-hover-animate="rubberBand" href="https://www.google.com/search?q=Ankit+Limone&amp;sxsrf=AOaemvL8XauwECo1TUzcKArZw3_NCRijYw%3A1642803533518&amp;source=hp&amp;ei=TTHrYev8HI2Nr7wP5faD8Ak&amp;iflsig=ALs-wAMAAAAAYes_XZJz5CP2mti3Ufy3tIwKHfhcvhm9&amp;ved=0ahUKEwir17GI8MP1AhWNxosBHWX7AJ4Q4dUDCAc&amp;uact=5&amp;oq=Ankit+Limone&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BAgAEEM6EAguELEDEIMBEMcBENEDEEM6CAguELEDEIMBOhEILhCABBCxAxCDARDHARDRAzoICAAQgAQQsQM6CAguEIAEELEDOgQILhBDOgcIABCxAxBDOgUIABCABDoHCAAQyQMQQzoHCC4QsQMQQzoFCC4QgAQ6CwgAEIAEELEDEIMBOgcILhCABBAKOgsILhCABBDHARCvAToECAAQDToGCAAQFhAeOggIABAIEA0QHjoCCCZQAFirL2DCNWgCcAB4AIABrAGIAfUQkgEEMC4xNJgBAKABAQ&amp;sclient=gws-wiz"><i class="fab fa-google" style="color: cyan;"></i></a><a data-bss-hover-animate="rubberBand" href="https://www.linkedin.com/in/ankit-limone-381206180"><i class="fab fa-linkedin-in" style="color: cyan;"></i></a><a data-bss-hover-animate="rubberBand" href="https://github.com/AnkitLimone"><i class="fab fa-github" style="color: cyan;"></i></a><a data-bss-hover-animate="rubberBand" href="mailto:ankitlimone16@gmail.com"><i class="icon ion-ios-email" style="color: cyan;"></i></a></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-black/50 to-black/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-text">Featured Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
             </div>
-            <p class="copyright" style="height: -3px;">Ankit Limone © 2022<br>Developed by Ankit Limone</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border project-card transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-lg h-40">
+                        <img src="https://via.placeholder.com/600x400" alt="RAG AI for Code Generation" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">RAG AI for Code Generation</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Developed a Retrieval-Augmented Generation system using DeepSeek and Qdrant with Streamlit UI for intelligent code generation and completion.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 rounded-full text-xs bg-cyan-400/10 text-cyan-300">DeepSeek</span>
+                        <span class="px-2 py-1 rounded-full text-xs bg-purple-400/10 text-purple-300">Qdrant</span>
+                        <span class="px-2 py-1 rounded-full text-xs bg-blue-400/10 text-blue-300">RAG</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-cyan-300 hover:text-cyan-200 flex items-center text-sm">
+                            <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white flex items-center text-sm">
+                            <i class="fab fa-github mr-1"></i> Code
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border project-card transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-lg h-40">
+                        <img src="https://via.placeholder.com/600x400" alt="AI-Based Predictive Maintenance" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">AI-Based Predictive Maintenance</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Created a predictive maintenance system for factories using machine learning to anticipate equipment failures and optimize maintenance schedules.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 rounded-full text-xs bg-purple-400/10 text-purple-300">TensorFlow</span>
+                        <span class="px-2 py-1 rounded-full text-xs bg-green-400/10 text-green-300">Time Series</span>
+                        <span class="px-2 py-1 rounded-full text-xs bg-yellow-400/10 text-yellow-300">Anomaly Detection</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-cyan-300 hover:text-cyan-200 flex items-center text-sm">
+                            <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white flex items-center text-sm">
+                            <i class="fab fa-github mr-1"></i> Code
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border project-card transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-lg h-40">
+                        <img src="https://via.placeholder.com/600x400" alt="Sentiment Analysis for Crypto" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Sentiment Analysis for Crypto</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Published research on using NLP sentiment analysis of social media to predict cryptocurrency price movements with 78% accuracy.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 rounded-full text-xs bg-blue-400/10 text-blue-300">NLP</span>
+                        <span class="px-2 py-1 rounded-full text-xs bg-red-400/10 text-red-300">BERT</span>
+                        <span class="px-2 py-1 rounded-full text-xs bg-indigo-400/10 text-indigo-300">Sentiment Analysis</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-cyan-300 hover:text-cyan-200 flex items-center text-sm">
+                            <i class="fas fa-file-pdf mr-1"></i> Research Paper
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white flex items-center text-sm">
+                            <i class="fab fa-github mr-1"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-cyan-400 text-base font-medium rounded-md text-white bg-black/20 hover:bg-cyan-400/10 neon-border glow">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 bg-black/30 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-text">Certifications & Achievements</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-cyan-400/10 rounded-full flex items-center justify-center text-cyan-300 text-2xl">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-cyan-300 mb-2">Oracle Cloud Infrastructure 2024</h3>
+                    <p class="text-gray-400 text-sm">Generative AI</p>
+                </div>
+                
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-400/10 rounded-full flex items-center justify-center text-purple-300 text-2xl">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-purple-300 mb-2">Deep Learning Specialization</h3>
+                    <p class="text-gray-400 text-sm">Coursera</p>
+                </div>
+                
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-400/10 rounded-full flex items-center justify-center text-blue-300 text-2xl">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-300 mb-2">KPMG Virtual Internship</h3>
+                    <p class="text-gray-400 text-sm">Data Analytics</p>
+                </div>
+                
+                <div class="bg-black/30 p-6 rounded-lg border border-gray-800 neon-border text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-green-400/10 rounded-full flex items-center justify-center text-green-300 text-2xl">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-300 mb-2">Advanced Learning Algorithms</h3>
+                    <p class="text-gray-400 text-sm">Stanford</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-black/50 to-black/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-text">Get In Touch</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-6">Let's Collaborate</h3>
+                    <p class="text-gray-300 mb-8">
+                        Interested in working together or have questions about my work? 
+                        Feel free to reach out through the form or connect with me on social media.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-cyan-400/10 flex items-center justify-center text-cyan-300 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Email</p>
+                                <p class="text-gray-300">ankitlimone16@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-400/10 flex items-center justify-center text-purple-300 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Location</p>
+                                <p class="text-gray-300">Bengaluru, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-400/10 flex items-center justify-center text-blue-300 mr-4">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Schedule a Meeting</p>
+                                <a href="#" class="text-gray-300 hover:text-cyan-300">Book via Calendly</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-bold text-cyan-300 mb-4">Connect With Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/ankitlimone" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-cyan-400/10 flex items-center justify-center text-gray-300 hover:text-cyan-300 border border-gray-700">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/ankitlimone" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-purple-400/10 flex items-center justify-center text-gray-300 hover:text-purple-300 border border-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-400/10 flex items-center justify-center text-gray-300 hover:text-blue-300 border border-gray-700">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.kaggle.com/ankitlimone" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-400/10 flex items-center justify-center text-gray-300 hover:text-red-300 border border-gray-700">
+                                <i class="fab fa-kaggle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-black/30 p-8 rounded-lg border border-gray-800 neon-border">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-300">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-300">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-300">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-300"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg text-white font-medium hover:opacity-90 transition-all duration-300">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center">
+                <div class="text-2xl font-bold neon-text mb-4">Ankit Limone</div>
+                <p class="text-gray-400 text-center max-w-2xl mb-8">
+                    Innovating at the intersection of AI, machine learning, and natural language processing to create intelligent solutions for tomorrow's challenges.
+                </p>
+                <div class="flex space-x-6 mb-8">
+                    <a href="https://github.com/ankitlimone" class="text-gray-400 hover:text-cyan-300 neon-hover">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ankitlimone" class="text-gray-400 hover:text-blue-400 neon-hover">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.kaggle.com/ankitlimone" class="text-gray-400 hover:text-red-400 neon-hover">
+                        <i class="fab fa-kaggle"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/ankitlimone/" class="text-gray-400 hover:text-orange-400 neon-hover">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-47508-5_17" class="text-gray-400 hover:text-green-400 neon-hover">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    &copy; 2024 Ankit Limone. All rights reserved.
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/cat.js"></script>
-    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
-    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
-    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
-    <script src="assets/js/intro.js"></script>
-</body>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-cyan-400/10 rounded-full flex items-center justify-center text-cyan-300 border border-cyan-400/30 hover:bg-cyan-400/20 transition-all duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AI Chatbot Easter Egg -->
+    <div id="chatbot-trigger" class="fixed bottom-8 left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white cursor-pointer glow hover:scale-110 transition-all duration-300">
+        <i class="fas fa-robot text-2xl"></i>
+    </div>
+    
+    <div id="chatbot-container" class="fixed bottom-24 left-8 w-80 bg-black/80 backdrop-blur-lg rounded-lg border border-gray-800 shadow-xl hidden transition-all duration-300">
+        <div class="p-4 border-b border-gray-800 flex justify-between items-center">
+            <h3 class="font-bold text-cyan-300">AI Assistant</h3>
+            <button id="close-chatbot" class="text-gray-400 hover:text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="p-4 h-64 overflow-y-auto">
+            <div class="mb-4">
+                <div class="inline-block px-4 py-2 rounded-lg bg-gray-800/50 text-gray-300 max-w-xs">
+                    Hello! I'm your AI assistant. How can I help you with AI/ML questions today?
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t border-gray-800">
+            <div class="relative">
+                <input id="chatbot-input" type="text" placeholder="Ask about AI/ML..." class="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-400 text-gray-300 pr-10">
+                <button id="send-chatbot" class="absolute right-2 top-2 text-gray-400 hover:text-cyan-300">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'skills') {
+                        animateSkillBars();
+                    }
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // AI Chatbot functionality
+        const chatbotTrigger = document.getElementById('chatbot-trigger');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const closeChatbot = document.getElementById('close-chatbot');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const sendChatbot = document.getElementById('send-chatbot');
+
+        chatbotTrigger.addEventListener('click', () => {
+            chatbotContainer.classList.toggle('hidden');
+        });
+
+        closeChatbot.addEventListener('click', () => {
+            chatbotContainer.classList.add('hidden');
+        });
+
+        function addBotMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'mb-4';
+            messageDiv.innerHTML = `
+                <div class="inline-block px-4 py-2 rounded-lg bg-gray-800/50 text-gray-300 max-w-xs">
+                    ${text}
+                </div>
+            `;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function addUserMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'mb-4 text-right';
+            messageDiv.innerHTML = `
+                <div class="inline-block px-4 py-2 rounded-lg bg-cyan-400/20 text-cyan-300 max-w-xs">
+                    ${text}
+                </div>
+            `;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        sendChatbot.addEventListener('click', () => {
+            const message = chatbotInput.value.trim();
+            if (message) {
+                addUserMessage(message);
+                chatbotInput.value = '';
+                
+                // Simple responses (in a real app, you'd connect to an API)
+                setTimeout(() => {
+                    const responses = [
+                        "That's an interesting question about AI. Could you be more specific?",
+                        "I can provide information on machine learning models, NLP techniques, and AI best practices.",
+                        "For LLM fine-tuning, you typically need a dataset of examples and compute resources.",
+                        "Generative AI is transforming many industries with its creative capabilities.",
+                        "For your project, consider using PyTorch for flexibility or TensorFlow for production."
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addBotMessage(randomResponse);
+                }, 800);
+            }
+        });
+
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatbot.click();
+            }
+        });
+
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00f0ff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#00f0ff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            }
+        });
+    </script>
+</body>
 </html>
